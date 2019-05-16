@@ -10,7 +10,7 @@ var message = 'hello world from hash 😶'
 if (location.hash === '#getdata') {
     var ifrproxy = document.createElement('iframe');
     ifrproxy.style.display = 'none';
-    ifrproxy.src = 'http://localhost:3000/b.html#' + message; // 注意该文件在3000端口下
+    ifrproxy.src = 'http://cross.demopai.com:3019/b.html#' + message; // 注意该文件在3000端口下
     document.body.appendChild(ifrproxy);
 }
 </script>

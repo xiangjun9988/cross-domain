@@ -22,12 +22,12 @@
 </head>
 <body>
 <div id="father">
-    <p>这里3000端口</p>
+    <p>这里3015端口</p>
     <input type="text"/>
     <button>发送信息</button>
     <p style="text-align: left;">message :  <span></span></p>
 </div>
-<iframe id="child" src="http://localhost:3001"></iframe>
+<iframe id="child" src="http://cross.demopai.com:3016"></iframe>
 <script>
     var input = document.getElementsByTagName('input')[0];
     var span = document.getElementsByTagName('span')[0];
@@ -36,11 +36,11 @@
 
     btn.onclick = function () {
         var msg = input.value;
-        frame.postMessage('收到信息：' + msg + ' --from 3000 port！😨', 'http://localhost:3001');
+        frame.postMessage('收到信息：' + msg + ' --from 3015 port！😨', 'http://cross.demopai.com:3016');
     }
 
     function receiveMessage (event) {
-        if (event.origin !== 'http://localhost:3001') {
+        if (event.origin !== 'http://cross.demopai.com:3016') {
             return false
         }
         var data = event.data;

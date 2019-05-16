@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var requestPort = 3000;
+var requestPort = 3025;
 
 app.use(express.static(__dirname + '/staticReq'));
 
