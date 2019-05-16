@@ -8,6 +8,9 @@
 7-Proxy 3023/3024
 8-WebSocket 3025/3026
 
+### 参考文章
+https://segmentfault.com/a/1190000011145364#articleHeader0
+
 
 ### 跨域的简单小demo
 这是一个关于跨域的简单demo集合，在demo里面会加上自己的理解并添加相应的注释，尽量以简单的demo介绍跨域的方法，适合`入门`学习跨域的。所有demo都是使用基于nodeJs的Web开发框架Express，需要一点点nodeJS的知识，如果不会nodeJS也没关系，注释里面会详细解释说明。
