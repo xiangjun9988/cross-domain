@@ -37,39 +37,39 @@
 ### 1. CORS跨域
 
 项目运行起来之后，
-- 请求数据页面地址： http://cross.demopai.com:3000
-- 查看数据： http://cross.demopai.com:3001
+- 请求数据页面地址： http://cross.demopai.com:3011
+- 查看数据： http://cross.demopai.com:3012
 
 
 ### 2. JSONP跨域
 
 项目运行起来后，
-- 请求页面： http://cross.demopai.com:3000
-- 响应页面为 http://cross.demopai.com:3001
+- 请求页面： http://cross.demopai.com:3013
+- 响应页面为 http://cross.demopai.com:3014
 
 ### 3. postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域
 
-> 项目运行地址： http://cross.demopai.com:3000
+> 项目运行地址： http://cross.demopai.com:3015
 
 ### 4. window.name跨域
 
-在 http://cross.demopai.com:3000/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://cross.demopai.com:3001/c.html '，等这个iframe加载完之后，重新设置src属性为同源的地址' http://cross.demopai.com:3000/b.html '(b.html是一个空的html文件)，现在iframe与a.html同源，那就可以访问window.name属性，而name值没有变化，因为window.name属性在不同的页面（甚至不同域名）加载后依旧存在。
+在 http://cross.demopai.com:3017/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://cross.demopai.com:3018/c.html '，等这个iframe加载完之后，重新设置src属性为同源的地址' http://cross.demopai.com:3017/b.html '(b.html是一个空的html文件)，现在iframe与a.html同源，那就可以访问window.name属性，而name值没有变化，因为window.name属性在不同的页面（甚至不同域名）加载后依旧存在。
 
 
-> 项目运行地址： http://cross.demopai.com:3000/a.html
+> 项目运行地址： http://cross.demopai.com:3017/a.html
 
 ### 5. location.hash跨域
-在 http://cross.demopai.com:3000/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://cross.demopai.com:3001/c.html#getdata '，在c.html判断hash值是否为'#getdata'，如果为'#getdata'，则在当前的iframe(c.html)中再生成一个隐藏的iframe，其src属性指向' http://cross.demopai.com:3000/b.html '，因为a.html和b.html同源，所以可以在b.html里面修改a.html的hash值，这样a.html就可以通过获取自身的hash值得到数据
-> 项目运行地址： http://cross.demopai.com:3000/a.html
+在 http://cross.demopai.com:3019/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://cross.demopai.com:3020/c.html#getdata '，在c.html判断hash值是否为'#getdata'，如果为'#getdata'，则在当前的iframe(c.html)中再生成一个隐藏的iframe，其src属性指向' http://cross.demopai.com:3019/b.html '，因为a.html和b.html同源，所以可以在b.html里面修改a.html的hash值，这样a.html就可以通过获取自身的hash值得到数据
+> 项目运行地址： http://cross.demopai.com:3019/a.html
 
 ### 6. document.domain跨域
 document.domain设置成自身或更高一级的父域，且主域必须相同。
 【服务器已过期，域名无法使用，demo作废】
 #### 注意！！
-这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，所以抱歉这个demo无法在本地运行。不过我只是把demo放到了云服务器上，代码还是一样的，没有修改过。
+这是挂在我自己腾讯云域名(demopai.com)上的demo，所以抱歉这个demo无法在本地运行。不过我只是把demo放到了云服务器上，代码还是一样的，没有修改过。
 
-> 线上访问地址： http://a.xuhaodong.cn/a.html
+> 线上访问地址： http://cross.demopai.com:3021/a.html
 
 
 如果要在本地运行的话，需要搭建一个本地web服务器，
@@ -87,5 +87,5 @@ document.domain设置成自身或更高一级的父域，且主域必须相同�
 
 ### 8. WebSocket跨域
 WebSocket是一种通信协议，使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。
-> 项目运行地址： http://cross.demopai.com:3000/a.html
+> 项目运行地址： http://cross.demopai.com:3025/a.html
 
